@@ -1,0 +1,10 @@
+it seems possibe for me to simplify the control input for wheeled control by using tendons might help with rl,
+i could make it so rl can control the tendon "gains" for forward and turning
+
+<motor> control might be a good option to use instead of velocity becase it allows for realistic torque controll and cant cheat
+
+how joint position is controlled is by modifying default position of the joint.
+for wheel we need to check if it's doing this or now if so the robot will never stand still because even at 0 input there will still be a controll signal
+
+check what input range the ppo policy is able to output
+-> yup there is a limit set by joint range and #Colab_wheeled.ipynb, line 811 policy_config.action_scale = 0.75
