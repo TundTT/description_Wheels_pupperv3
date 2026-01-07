@@ -107,7 +107,7 @@
 
 
             <!-- Front Right Leg - Part 1 -->
-            <body name="leg_front_r_1" pos="0.075 -0.0835 0" quat="0.707105 0.707108 0 0"
+            <body name="leg_front_r_1" pos="0.075 -0.0835 0" euler="1.57 0 1"
                 gravcomp="0">
                 <inertial pos="0 0 0" mass="0.18" diaginertia="7.4e-05 5.8e-05 4.8e-05" />
                 <joint name="leg_front_r_1" pos="0 0 0" axis="0 0 1" range="-1.22 2.51" />
@@ -141,7 +141,7 @@
 
 
             <!-- Front Left Leg - Part 1 -->
-            <body name="leg_front_l_1" pos="0.075 0.0835 0" quat="0.707105 -0.707108 0 0"
+            <body name="leg_front_l_1" pos="0.075 0.0835 0" euler="-1.57 0 -1"
                 gravcomp="0">
                 <inertial pos="0 0 0" mass="0.18" diaginertia="7.4e-05 5.8e-05 4.8e-05" />
                 <joint name="leg_front_l_1" pos="0 0 0" axis="0 0 -1" range="-1.22 2.51" />
@@ -176,7 +176,7 @@
 
 
             <!-- Back Right Leg - Part 1 -->
-            <body name="leg_back_r_1" pos="-0.075 -0.0725 0" quat="0.707105 0.707108 0 0"
+            <body name="leg_back_r_1" pos="-0.075 -0.0725 0" euler="1.57 0 0.6"
                 gravcomp="0">
                 <inertial pos="0 0 0" mass="0.18" diaginertia="7.4e-05 5.8e-05 4.8e-05" />
                 <joint name="leg_back_r_1" pos="0 0 0" axis="0 0 1" range="-1.22 2.51" />
@@ -211,7 +211,7 @@
 
 
             <!-- Back Left Leg - Part 1 -->
-            <body name="leg_back_l_1" pos="-0.075 0.0725 0" quat="0.707105 -0.707108 0 0"
+            <body name="leg_back_l_1" pos="-0.075 0.0725 0" euler="-1.57 0 -0.6"
                 gravcomp="0">
                 <inertial pos="0 0 0" mass="0.18" diaginertia="7.4e-05 5.8e-05 4.8e-05" />
                 <joint name="leg_back_l_1" pos="0 0 0" axis="0 0 -1" range="-1.22 2.51" />
