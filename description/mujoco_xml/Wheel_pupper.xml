@@ -24,6 +24,8 @@
         <framelinvel objtype="site" objname="body_imu_site" name="global_linvel" />
         <frameangvel objtype="site" objname="body_imu_site" name="global_angvel" />
     </sensor>
+
+
     <!-- Actuators -->
     <actuator>
         <general joint="leg_front_r_1" name="leg_front_r_1" />
@@ -42,6 +44,8 @@
         <general joint="leg_back_l_2" name="leg_back_l_2" />
         <general joint="leg_back_l_3" name="leg_back_l_3" />
     </actuator>
+
+    
     <!-- Default Settings -->
     <default>
         <general forcerange="-3 3" forcelimited="true" biastype="affine" gainprm="5.0 0 0"
@@ -87,6 +91,8 @@
         <mesh name="BL_WheelMesh" file="Wheels.stl"
             scale="1 1 -1" />
     </asset>
+
+
     <!-- Worldbody -->
     <worldbody>
         <!-- Base Link -->
@@ -98,6 +104,8 @@
                 quat="0.499998 -0.5 -0.500002 0.5" type="box" class="collision" /> -->
             <geom quat="0.499998 -0.5 -0.500002 0.5" type="mesh" contype="0" conaffinity="0"
                 group="1" density="0" mesh="BodyV4v70_001" />
+
+
             <!-- Front Right Leg - Part 1 -->
             <body name="leg_front_r_1" pos="0.075 -0.0835 0" quat="0.707105 0.707108 0 0"
                 gravcomp="0">
@@ -105,6 +113,7 @@
                 <joint name="leg_front_r_1" pos="0 0 0" axis="0 0 1" range="-1.22 2.51" />
                 <geom pos="0 0 -0.028" quat="1.32679e-06 0 0 1" type="mesh" contype="0"
                     conaffinity="0" group="1" density="0" mesh="LegAssemblyForFlangedv26_001" />
+
                     <!-- Front Right Leg - Part 2 -->
                     <body name="leg_front_r_2" pos="0 0 0"
                     quat="0.707107 2.24089e-06 -0.707107 4.83018e-06" gravcomp="0">
@@ -116,7 +125,8 @@
                     <geom pos="-0.028 0 0" quat="-2.93388e-06 0.707108 2.26082e-06 0.707106"
                         type="mesh" contype="0" conaffinity="0" group="1" density="0"
                         mesh="LegAssemblyForFlangedv26_002" />
-                    <!-- Front Right Leg - Part 3 -->
+
+                    <!-- Front Right Wheel - Part 3 -->
                     <body name="leg_front_r_3" pos="0 -0.0494 0.0685" quat="0.707105 0 0.707108 0"
                         gravcomp="0">
                         <inertial pos="0.03866 -0.03585 0.01833"
@@ -125,13 +135,15 @@
                         <joint name="leg_front_r_3" pos="0 0 0" axis="0 0 1" range="-2.79 0.71" />
                         <geom size="0.01995" pos="0.06231 -0.06216 0.018" quat="1.32679e-06 0 0 1"
                             type="sphere" class="collision" />
-                        <geom pos="0.0685 0.0494 -0.028" quat="1.32679e-06 0 0 1" type="mesh"
+                        <geom pos="0 0 0.035" euler="0 -1.5708 1.5708" type="mesh"
                             contype="0" conaffinity="0" group="1" density="0"
                             mesh="FR_WheelMesh" />
                         <site name="leg_front_r_3_foot_site" pos="0.06231 -0.06216 0.018" />
                     </body>
                 </body>
             </body>
+
+
             <!-- Front Left Leg - Part 1 -->
             <body name="leg_front_l_1" pos="0.075 0.0835 0" quat="0.707105 -0.707108 0 0"
                 gravcomp="0">
@@ -139,6 +151,7 @@
                 <joint name="leg_front_l_1" pos="0 0 0" axis="0 0 1" range="-2.51 1.22" />
                 <geom pos="0 0 -0.028" quat="1.32679e-06 0 0 1" type="mesh" contype="0"
                     conaffinity="0" group="1" density="0" mesh="LegAssemblyForFlangedv26_010" />
+
                     <!-- Front Left Leg - Part 2 -->
                     <body name="leg_front_l_2" pos="0 0 0"
                     quat="-3.89602e-06 0.707107 -1.29867e-06 -0.707107" gravcomp="0">
@@ -150,7 +163,8 @@
                     <geom pos="0.028 0 0" quat="-2.93388e-06 0.707108 2.26082e-06 0.707106"
                         type="mesh" contype="0" conaffinity="0" group="1" density="0"
                         mesh="LegAssemblyForFlangedv26_011" />
-                    <!-- Front Left Leg - Part 3 -->
+
+                    <!-- Front Left Wheel - Part 3 -->
                     <body name="leg_front_l_3" pos="0 -0.0494 0.0685"
                         quat="9.38184e-07 -0.707108 9.38187e-07 0.707105" gravcomp="0">
                         <inertial pos="0.03866 0.03585 0.01833"
@@ -159,14 +173,15 @@
                         <joint name="leg_front_l_3" pos="0 0 0" axis="0 0 1" range="-0.71 2.79" />
                         <geom size="0.01995" pos="0.06231 0.06216 0.018" quat="1.32679e-06 0 0 1"
                             type="sphere" class="collision" />
-                        <geom pos="0.0685 -0.0494 -0.028"
-                            quat="1.76029e-12 1.32679e-06 1 1.32679e-06" type="mesh" contype="0"
-                            conaffinity="0" group="1" density="0"
+                        <geom pos="0 0 0.035" euler="0 -1.5708 1.5708" type="mesh"
+                            contype="0" conaffinity="0" group="1" density="0"
                             mesh="FL_WheelMesh" />
                         <site name="leg_front_l_3_foot_site" pos="0.06231 0.06216 0.018" />
                     </body>
                 </body>
             </body>
+
+
             <!-- Back Right Leg - Part 1 -->
             <body name="leg_back_r_1" pos="-0.075 -0.0725 0" quat="0.707105 0.707108 0 0"
                 gravcomp="0">
@@ -174,6 +189,7 @@
                 <joint name="leg_back_r_1" pos="0 0 0" axis="0 0 1" range="-1.22 2.51" />
                 <geom pos="0 0 -0.028" quat="1.32679e-06 0 0 1" type="mesh" contype="0"
                     conaffinity="0" group="1" density="0" mesh="LegAssemblyForFlangedv26_005" />
+
                     <!-- Back Right Leg - Part 2 -->
                     <body name="leg_back_r_2" pos="0 0 0"
                     quat="0.707107 2.24089e-06 -0.707107 4.83018e-06" gravcomp="0">
@@ -185,7 +201,8 @@
                     <geom pos="-0.028 0 0" quat="-2.93388e-06 0.707108 2.26082e-06 0.707106"
                         type="mesh" contype="0" conaffinity="0" group="1" density="0"
                         mesh="LegAssemblyForFlangedv26_006" />
-                    <!-- Back Right Leg - Part 3 -->
+
+                    <!-- Back Right Wheel - Part 3 -->
                     <body name="leg_back_r_3" pos="0 -0.0494 0.0685" quat="0.707105 0 0.707108 0"
                         gravcomp="0">
                         <inertial pos="0.03866 -0.03585 0.01833"
@@ -194,13 +211,15 @@
                         <joint name="leg_back_r_3" pos="0 0 0" axis="0 0 1" range="-2.79 0.71" />
                         <geom size="0.01995" pos="0.06231 -0.06216 0.018" quat="1.32679e-06 0 0 1"
                             type="sphere" class="collision" />
-                        <geom pos="0.0685 0.0494 -0.028" quat="1.32679e-06 0 0 1" type="mesh"
+                        <geom pos="0 0 0.035" euler="0 -1.5708 1.5708" type="mesh"
                             contype="0" conaffinity="0" group="1" density="0"
                             mesh="BR_WheelMesh" />
                         <site name="leg_back_r_3_foot_site" pos="0.06231 -0.06216 0.018" />
                     </body>
                 </body>
             </body>
+
+
             <!-- Back Left Leg - Part 1 -->
             <body name="leg_back_l_1" pos="-0.075 0.0725 0" quat="0.707105 -0.707108 0 0"
                 gravcomp="0">
@@ -208,6 +227,7 @@
                 <joint name="leg_back_l_1" pos="0 0 0" axis="0 0 1" range="-2.51 1.22" />
                 <geom pos="0 0 -0.028" quat="1.32679e-06 0 0 1" type="mesh" contype="0"
                     conaffinity="0" group="1" density="0" mesh="LegAssemblyForFlangedv26_013" />
+
                     <!-- Back Left Leg - Part 2 -->
                     <body name="leg_back_l_2" pos="0 0 0"
                     quat="-3.89602e-06 0.707107 -1.29867e-06 -0.707107" gravcomp="0">
@@ -219,7 +239,8 @@
                     <geom pos="0.028 0 0" quat="-2.93388e-06 0.707108 2.26082e-06 0.707106"
                         type="mesh" contype="0" conaffinity="0" group="1" density="0"
                         mesh="LegAssemblyForFlangedv26_014" />
-                    <!-- Back Left Leg - Part 3 -->
+
+                    <!-- Back Left Wheel - Part 3 -->
                     <body name="leg_back_l_3" pos="0 -0.0494 0.0685"
                         quat="9.38184e-07 -0.707108 9.38187e-07 0.707105" gravcomp="0">
                         <inertial pos="0.03866 0.03585 0.01833"
@@ -228,9 +249,8 @@
                         <joint name="leg_back_l_3" pos="0 0 0" axis="0 0 1" range="-0.71 2.79" />
                         <geom size="0.01995" pos="0.06231 0.06216 0.018" quat="1.32679e-06 0 0 1"
                             type="sphere" class="collision" />
-                        <geom pos="0.0685 -0.0494 -0.028"
-                            quat="1.76029e-12 1.32679e-06 1 1.32679e-06" type="mesh" contype="0"
-                            conaffinity="0" group="1" density="0"
+                        <geom pos="0 0 0.035" euler="0 -1.5708 1.5708" type="mesh"
+                            contype="0" conaffinity="0" group="1" density="0"
                             mesh="BL_WheelMesh" />
                         <site name="leg_back_l_3_foot_site" pos="0.06231 0.06216 0.018" />
                     </body>
@@ -238,6 +258,8 @@
             </body>
             <site name="body_imu_site" pos="0.09 0 0.032" />
         </body>
+
+
         <!-- Environment -->
         <geom name="floor" size="0 0 .05" type="plane" material="grid" condim="3" contype="1"
             conaffinity="1" />
@@ -247,6 +269,8 @@
             specular="0.3 0.3 0.3" pos="0 -4 4" cutoff="100" />
         <camera name="tracking_cam" mode="targetbody" target="base_link" pos="0.5 -0.5 0.5" />
     </worldbody>
+
+
     <!-- Custom Settings -->
     <custom>
         <numeric data="5" name="max_contact_points" />
