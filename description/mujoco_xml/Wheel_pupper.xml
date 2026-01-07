@@ -134,7 +134,7 @@
                         <geom pos="0 0 0.035" euler="0 -1.5708 1.5708" type="mesh"
                             contype="0" conaffinity="0" group="1" density="0"
                             mesh="FR_WheelMesh" />
-                        <site name="leg_front_r_3_foot_site" pos="0.06231 -0.06216 0.018" />
+                        <site name="leg_front_r_3_foot_site" pos="0 0 0.035" />
                     </body>
                 </body>
             </body>
@@ -169,7 +169,7 @@
                         <geom pos="0 0 0.035" euler="0 -1.5708 1.5708" type="mesh"
                             contype="0" conaffinity="0" group="1" density="0"
                             mesh="FL_WheelMesh" />
-                        <site name="leg_front_l_3_foot_site" pos="0.06231 0.06216 0.018" />
+                        <site name="leg_front_l_3_foot_site" pos="0 0 0.035" />
                     </body>
                 </body>
             </body>
@@ -204,7 +204,7 @@
                         <geom pos="0 0 0.035" euler="0 -1.5708 1.5708" type="mesh"
                             contype="0" conaffinity="0" group="1" density="0"
                             mesh="BR_WheelMesh" />
-                        <site name="leg_back_r_3_foot_site" pos="0.06231 -0.06216 0.018" />
+                        <site name="leg_back_r_3_foot_site" pos="0 0 0.035" />
                     </body>
                 </body>
             </body>
@@ -239,7 +239,7 @@
                         <geom pos="0 0 0.035" euler="0 -1.5708 1.5708" type="mesh"
                             contype="0" conaffinity="0" group="1" density="0"
                             mesh="BL_WheelMesh" />
-                        <site name="leg_back_l_3_foot_site" pos="0.06231 0.06216 0.018" />
+                        <site name="leg_back_l_3_foot_site" pos="0 0 0.035" />
                     </body>
                 </body>
             </body>
