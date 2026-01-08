@@ -8,3 +8,7 @@ for wheel we need to check if it's doing this or now if so the robot will never 
 
 check what input range the ppo policy is able to output
 -> yup there is a limit set by joint range and #Colab_wheeled.ipynb, line 811 policy_config.action_scale = 0.75
+
+footsite used in enviroment to calculate foot slip and airtime
+CLOSER ATTENTION TO THAT WHEN LOOKING AT REWARDS
+
