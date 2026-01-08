@@ -29,26 +29,26 @@
     <actuator>
         <general joint="leg_front_r_1" name="leg_front_r_1" />
         <general joint="leg_front_r_2" name="leg_front_r_2" />
-        <general joint="Wheel_FR" name="Wheel_FR" />
+        <general joint="Wheel_FR" name="Wheel_FR" class="wheel" />
 
         <general joint="leg_front_l_1" name="leg_front_l_1" />
         <general joint="leg_front_l_2" name="leg_front_l_2" />
-        <general joint="Wheel_FL" name="Wheel_FL" />
+        <general joint="Wheel_FL" name="Wheel_FL" class="wheel" />
 
         <general joint="leg_back_r_1" name="leg_back_r_1" />
         <general joint="leg_back_r_2" name="leg_back_r_2" />
-        <general joint="Wheel_BR" name="Wheel_BR" />
+        <general joint="Wheel_BR" name="Wheel_BR" class="wheel" />
 
         <general joint="leg_back_l_1" name="leg_back_l_1" />
         <general joint="leg_back_l_2" name="leg_back_l_2" />
-        <general joint="Wheel_BL" name="Wheel_BL" />
+        <general joint="Wheel_BL" name="Wheel_BL" class="wheel" />
     </actuator>
 
     
     <!-- Default Settings -->
     <default>
         <general forcerange="-3 3" forcelimited="true" biastype="affine" gainprm="5.0 0 0"
-            biasprm="0 -5.0 -0.1" ctrlrange="-10 10" ctrllimited="true" />
+            biasprm="0 -5.0 -0.1" ctrlrange="-5 5" ctrllimited="true" />
 
 
         <!-- visual geom will go to group 4 -->
@@ -58,6 +58,11 @@
         <default class="collision">
             <geom group="3" contype="1" conaffinity="1" solimp="0.015 1 0.031"
                 friction="0.8 0.02 0.01" />
+        </default>
+
+        <default class="wheel">
+            <joint limited="false" />
+            <general ctrllimited="false"/>
         </default>
 
         <joint armature="0.0016" type="hinge" damping="0.01" frictionloss="0.125" limited="true" />
@@ -128,7 +133,7 @@
                     <!-- Front Right Wheel - Part 3 -->
                     <body name="Wheel_FR" pos="0 -0.0494 0.0685" quat="0.707105 0 0.707108 0" gravcomp="0" >
                         <inertial pos="0 0 0.035" mass="0.05" diaginertia="2.75142e-5 2.75142e-5 4.93951e-5" />
-                        <joint name="Wheel_FR" pos="0 0 0" axis="0 0 1" range="-2.79 0.71" />
+                        <joint name="Wheel_FR" pos="0 0 0" axis="0 0 1" class="wheel" />
                         <geom size="0.04445 0.013" pos="0 0 0.035" type="cylinder" class="collision" />
                         <geom pos="0 0 0.035" euler="0 -1.5708 1.5708" type="mesh"
                             contype="0" conaffinity="0" group="1" density="0"
@@ -163,7 +168,7 @@
                     <body name="Wheel_FL" pos="0 -0.0494 0.0685"
                         quat="9.38184e-07 -0.707108 9.38187e-07 0.707105" gravcomp="0">
                         <inertial pos="0 0 0.035" mass="0.05" diaginertia="2.75142e-5 2.75142e-5 4.93951e-5" />
-                        <joint name="Wheel_FL" pos="0 0 0" axis="0 0 -1" range="-2.79 0.71" />
+                        <joint name="Wheel_FL" pos="0 0 0" axis="0 0 -1" class="wheel" />
                         <geom size="0.04445 0.013" pos="0 0 0.035" type="cylinder" class="collision" />
                         <geom pos="0 0 0.035" euler="0 -1.5708 1.5708" type="mesh"
                             contype="0" conaffinity="0" group="1" density="0"
@@ -198,7 +203,7 @@
                     <body name="Wheel_BR" pos="0 -0.0494 0.0685" quat="0.707105 0 0.707108 0"
                         gravcomp="0">
                         <inertial pos="0 0 0.035" mass="0.05" diaginertia="2.75142e-5 2.75142e-5 4.93951e-5" />
-                        <joint name="Wheel_BR" pos="0 0 0" axis="0 0 1" range="-2.79 0.71" />
+                        <joint name="Wheel_BR" pos="0 0 0" axis="0 0 1" class="wheel" />
                         <geom size="0.04445 0.013" pos="0 0 0.035" type="cylinder" class="collision" />
                         <geom pos="0 0 0.035" euler="0 -1.5708 1.5708" type="mesh"
                             contype="0" conaffinity="0" group="1" density="0"
@@ -233,7 +238,7 @@
                     <body name="Wheel_BL" pos="0 -0.0494 0.0685"
                         quat="9.38184e-07 -0.707108 9.38187e-07 0.707105" gravcomp="0">
                         <inertial pos="0 0 0.035" mass="0.05" diaginertia="2.75142e-5 2.75142e-5 4.93951e-5" />
-                        <joint name="Wheel_BL" pos="0 0 0" axis="0 0 -1" range="-2.79 0.71" />
+                        <joint name="Wheel_BL" pos="0 0 0" axis="0 0 -1" class="wheel" />
                         <geom size="0.04445 0.013" pos="0 0 0.035" type="cylinder" class="collision" />
                         <geom pos="0 0 0.035" euler="0 -1.5708 1.5708" type="mesh"
                             contype="0" conaffinity="0" group="1" density="0"
